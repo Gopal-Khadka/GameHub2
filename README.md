@@ -65,3 +65,34 @@ We use `Hstack`, `Image` and `Text` component to build up a simple navbar.
   <Text> NavBar</Text>
 </HStack>
 ```
+
+## Implementing Dark Mode
+
+You can refer to [Chakra's color mode](https://chakra-ui.com/docs/styled-system/color-mode) for dark mode implemenation.  
+You have to create a them config file called `theme.ts` to store the config object.
+
+```ts
+import { extendTheme, type ThemeConfig } from "@chakra-ui/react";
+
+const config: ThemeConfig = {
+  initialColorMode: "dark",
+  useSystemColorMode: false,
+};
+
+const theme = extendTheme({ config });
+
+export default theme;
+```
+
+Additionally, you have to modify `main.tsx` file to use the config `theme`.
+
+```tsx
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    <ChakraProvider theme={theme}>
+      <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+      <App />
+    </ChakraProvider>
+  </React.StrictMode>
+);
+```
