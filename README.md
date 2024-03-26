@@ -28,3 +28,40 @@ ReactDOM.createRoot(rootElement).render(
 ```
 
 Now you can use Chakra component in your component.
+
+## Creating a Responsive Layout
+
+To build responsive navbar layout, we use grid components defined in chakra UI which allows us to show and hide elements at certain breakpoints:
+
+```tsx
+import { Grid, GridItem, Show } from "@chakra-ui/react";
+<Grid
+  templateAreas={{
+    base: `"nav" "main"`, // for mobile
+    lg: `"nav nav" "aside main"`, // 1024px
+  }}
+>
+  <GridItem area="nav" bg="coral">
+    NavBar
+  </GridItem>
+  <Show above="lg">
+    <GridItem area="aside" bg="red">
+      Aside
+    </GridItem>
+  </Show>
+  <GridItem area="main" bg="blue">
+    Main
+  </GridItem>
+</Grid>;
+```
+
+## Building Navigation Bar
+
+We use `Hstack`, `Image` and `Text` component to build up a simple navbar.
+
+```tsx
+<HStack>
+  <Image src={logo} boxSize={"60px"} />
+  <Text> NavBar</Text>
+</HStack>
+```
