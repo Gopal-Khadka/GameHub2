@@ -21,8 +21,9 @@ function useGames() {
   const [error, setError] = useState("");
 
   useEffect(() => {
+    const controller = new AbortController();
     apiClient
-      .get(endpoint)
+      .get(endpoint, { signal: controller.signal })
       .then(({ data: { results } }: { data: FetchGameResponse }) => {
         const game_datas = results.map(
           ({ background_image, id, name, released, slug, rating }) => {
@@ -41,6 +42,8 @@ function useGames() {
       .catch((err: AxiosError) => {
         setError(err.message);
       });
+
+    return () => controller.abort();
   }, []);
   return { games, error };
 }
