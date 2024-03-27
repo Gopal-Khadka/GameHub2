@@ -31,10 +31,16 @@ const iconMapper: { [key: string]: IconType } = {
 
 const PlatformIcon = ({ platforms }: Props) => {
   return (
-    <HStack spacing={5} marginY={2}>
+    <HStack spacing={3} marginY={2} justifyContent={"space-between"}>
       {platforms.map(({ slug, name, id }) => {
         return (
-          <Icon key={id} as={iconMapper[slug]} title={name} color="gray.500" />
+          <Icon
+            key={id}
+            as={iconMapper[slug]}
+            title={name}
+            color="gray.500"
+            cursor="pointer"
+          />
         );
       })}
     </HStack>

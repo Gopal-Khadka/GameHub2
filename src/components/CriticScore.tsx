@@ -1,9 +1,21 @@
-import { Box } from "@chakra-ui/react";
+import { Badge } from "@chakra-ui/react";
 interface Props {
-  critic_score: number;
+  metacritic: number;
 }
-const CriticScore = ({ critic_score }: Props) => {
-  return <Box>{critic_score}</Box>;
+const CriticScore = ({ metacritic }: Props) => {
+  let color = metacritic > 75 ? "green" : metacritic > 60 ? "yellow" : "";
+  return (
+    <Badge
+      title={metacritic.toString()}
+      cursor="pointer"
+      borderRadius={2}
+      paddingX={2}
+      fontSize="14px"
+      colorScheme={color}
+    >
+      {metacritic}
+    </Badge>
+  );
 };
 
 export default CriticScore;

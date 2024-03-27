@@ -124,3 +124,5 @@ We import necessary icons like `ios`, `linux`, `windows` from `react-icons` and 
 We use coloring provided by Chakra UI to show the icons a bit darker. Refer to [this](https://chakra-ui.com/docs/styled-system/theme#black--white) for color.
 
 ## Displaying Critic Score
+
+We used `Badge` component from Chakra UI to show metacritic score. The score also defines the color scheme of the badge element. Refer to [this](https://chakra-ui.com/docs/components/badge/usage#usage) docs for more info.
