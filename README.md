@@ -97,4 +97,8 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
 );
 ```
 
-##
+## Fetching Games from RAWG API
+
+Go to official website of RAWG and get the apiKey after login of free tier.  
+Use axios library to get the games list from API using `apiKey` as `parameter`.  
+You can then store that list after cleaning it as `games` state. We are gonna use this data later to create game grid component to show game info.
