@@ -102,3 +102,9 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
 Go to official website of RAWG and get the apiKey after login of free tier.  
 Use axios library to get the games list from API using `apiKey` as `parameter`.  
 You can then store that list after cleaning it as `games` state. We are gonna use this data later to create game grid component to show game info.
+
+## Creating Custom Hook For Fetching Games
+
+In this module, we factor our code to separate the component and api-fetch logic to separate files. This declutters our code and implements abstraction in our code since the component doesn't need to know about the API. It just needs the game data. That's all.
+
+So, we created a file named `useGames.ts` which contains our custom hook to fetch the games and return the games list and error.
