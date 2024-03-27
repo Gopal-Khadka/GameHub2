@@ -1,12 +1,12 @@
-import { AxiosError } from "axios";
+import { AxiosError, CanceledError } from "axios";
 import { useState, useEffect } from "react";
 import apiClient from "../services/api-client";
-interface FetchGameResponse {
+export interface FetchGameResponse {
   count: number;
   results: Game[];
 }
 
-interface Game {
+export interface Game {
   id: number;
   name: string;
   background_image: string;
@@ -40,6 +40,7 @@ function useGames() {
         setGames(game_datas);
       })
       .catch((err: AxiosError) => {
+        if (err instanceof CanceledError) return;
         setError(err.message);
       });
 
