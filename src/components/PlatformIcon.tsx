@@ -17,19 +17,16 @@ interface Props {
   platforms: Platform[];
 }
 
-const returnIcon = (slug: string) => {
-  const iconMapper: { [key: string]: IconType } = {
-    pc: FaWindows,
-    playstation: FaPlaystation,
-    xbox: FaXbox,
-    mac: FaApple,
-    linux: FaLinux,
-    android: FaAndroid,
-    nintendo: SiNintendo,
-    ios: MdPhoneIphone,
-    web: BsGlobe,
-  };
-  return iconMapper[slug];
+const iconMapper: { [key: string]: IconType } = {
+  pc: FaWindows,
+  playstation: FaPlaystation,
+  xbox: FaXbox,
+  mac: FaApple,
+  linux: FaLinux,
+  android: FaAndroid,
+  nintendo: SiNintendo,
+  ios: MdPhoneIphone,
+  web: BsGlobe,
 };
 
 const PlatformIcon = ({ platforms }: Props) => {
@@ -37,7 +34,7 @@ const PlatformIcon = ({ platforms }: Props) => {
     <HStack spacing={5} marginY={2}>
       {platforms.map(({ slug, name, id }) => {
         return (
-          <Icon key={id} as={returnIcon(slug)} title={name} color="gray.500" />
+          <Icon key={id} as={iconMapper[slug]} title={name} color="gray.500" />
         );
       })}
     </HStack>
