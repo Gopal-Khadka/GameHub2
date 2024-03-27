@@ -116,3 +116,9 @@ So, we created a file named `useGames.ts` which contains our custom hook to fetc
 
 We use various Chakra UI card components to add responsive game cards in the website. CSS properties like `padding`, `overflow`, `borderRadius` are used to enhance the look of the cards.  
 Refer to [Chakra cards](https://chakra-ui.com/docs/components/card) and [Chakra SimpleGrid](https://chakra-ui.com/docs/components/simple-grid#changing-the-spacing-for-columns-and-rows) for more info.
+
+## Displaying Platform Icons
+
+We import necessary icons like ios, linux, windows from react-icons and create a icon based on the platform the game has been released on. We use `Hstack` to align all the platform icons horizontally.
+
+We use coloring provided by Chakra UI to show the icons a bit darker. Refer to [this](https://chakra-ui.com/docs/styled-system/theme#black--white) for color.

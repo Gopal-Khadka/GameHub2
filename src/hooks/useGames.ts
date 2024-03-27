@@ -5,6 +5,11 @@ export interface FetchGameResponse {
   count: number;
   results: Game[];
 }
+export interface Platform {
+  id: number;
+  name: string;
+  slug: string;
+}
 
 export interface Game {
   id: number;
@@ -13,6 +18,7 @@ export interface Game {
   released: number;
   slug: string;
   rating: number;
+  parent_platforms: { platform: Platform }[];
 }
 
 const endpoint = "/games";
@@ -26,7 +32,15 @@ function useGames() {
       .get(endpoint, { signal: controller.signal })
       .then(({ data: { results } }: { data: FetchGameResponse }) => {
         const game_datas = results.map(
-          ({ background_image, id, name, released, slug, rating }) => {
+          ({
+            background_image,
+            id,
+            name,
+            released,
+            slug,
+            rating,
+            parent_platforms,
+          }) => {
             return {
               id,
               name,
@@ -34,6 +48,7 @@ function useGames() {
               released,
               slug,
               rating,
+              parent_platforms,
             };
           }
         );
