@@ -122,3 +122,5 @@ Refer to [Chakra cards](https://chakra-ui.com/docs/components/card) and [Chakra 
 We import necessary icons like `ios`, `linux`, `windows` from `react-icons` and create a icon based on the platform the game has been released on. We use `Hstack` to align all the platform icons horizontally and `Icon` to render the desired platform component.
 
 We use coloring provided by Chakra UI to show the icons a bit darker. Refer to [this](https://chakra-ui.com/docs/styled-system/theme#black--white) for color.
+
+## Displaying Critic Score

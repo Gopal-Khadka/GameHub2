@@ -19,6 +19,7 @@ export interface Game {
   slug: string;
   rating: number;
   parent_platforms: { platform: Platform }[];
+  metacritic: number;
 }
 
 const endpoint = "/games";
@@ -40,6 +41,7 @@ function useGames() {
             slug,
             rating,
             parent_platforms,
+            metacritic,
           }) => {
             return {
               id,
@@ -49,6 +51,7 @@ function useGames() {
               slug,
               rating,
               parent_platforms,
+              metacritic,
             };
           }
         );
