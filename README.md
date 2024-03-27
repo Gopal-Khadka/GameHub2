@@ -126,3 +126,9 @@ We use coloring provided by Chakra UI to show the icons a bit darker. Refer to [
 ## Displaying Critic Score
 
 We used `Badge` component from Chakra UI to show metacritic score. The score also defines the color scheme of the badge element. Refer to [this](https://chakra-ui.com/docs/components/badge/usage#usage) docs for more info.
+
+## Get Optimized Images
+
+To show image in game cards, we can crop them so that it saves the users' bandwidth and improves loading speed of the website. This is easy task since the `RAWG` api allows us to directly modify the url to crop the images.
+
+For eg: If the image url is :`https://media.rawg.io/media/games/20a/20aa03a10cda45239fe22d035c0ebe64.jpg`, we can modify url through function to make it: `https://media.rawg.io/media/crop/600/400/games/20a/20aa03a10cda45239fe22d035c0ebe64.jpg` which crops the original image to size of 600 \* 400.
