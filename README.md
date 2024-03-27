@@ -31,7 +31,8 @@ Now you can use Chakra component in your component.
 
 ## Creating a Responsive Layout
 
-To build responsive navbar layout, we use grid components defined in chakra UI which allows us to show and hide elements at certain breakpoints:
+To build responsive navbar layout, we use [grid components](https://chakra-ui.com/docs/components/grid#template-columns) defined in chakra UI which allows us to show and hide elements at certain breakpoints.  
+To learn more about `Chakra Breakpoints`, visit [this](https://chakra-ui.com/docs/styled-system/responsive-styles#customizing-breakpoints).
 
 ```tsx
 import { Grid, GridItem, Show } from "@chakra-ui/react";
@@ -56,6 +57,8 @@ import { Grid, GridItem, Show } from "@chakra-ui/react";
 ```
 
 ## Building Navigation Bar
+
+Refer to [Chakra stacks](https://chakra-ui.com/docs/components/stack#stack-items-horizontally), [Chakra Image](https://chakra-ui.com/docs/components/image) and [Chakra Text](https://chakra-ui.com/docs/components/text).
 
 We use `Hstack`, `Image` and `Text` component to build up a simple navbar.
 
@@ -99,8 +102,8 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
 
 ## Fetching Games from RAWG API
 
-Go to official website of RAWG and get the apiKey after login of free tier.  
-Use axios library to get the games list from API using `apiKey` as `parameter`.  
+Go to official website of [RAWG](https://rawg.io/) and get the apiKey after login of free tier.  
+Use axios library to get the games list from API using `apiKey` as `parameter`. You can find docs [here](https://api.rawg.io/docs).  
 You can then store that list after cleaning it as `games` state. We are gonna use this data later to create game grid component to show game info.
 
 ## Creating Custom Hook For Fetching Games
@@ -110,3 +113,6 @@ In this module, we factor our code to separate the component and api-fetch logic
 So, we created a file named `useGames.ts` which contains our custom hook to fetch the games and return the games list and error.
 
 ## Build Game Cards
+
+We use various Chakra UI card components to add responsive game cards in the website. CSS properties like `padding`, `overflow`, `borderRadius` are used to enhance the look of the cards.  
+Refer to [Chakra cards](https://chakra-ui.com/docs/components/card) and [Chakra SimpleGrid](https://chakra-ui.com/docs/components/simple-grid#changing-the-spacing-for-columns-and-rows) for more info.
