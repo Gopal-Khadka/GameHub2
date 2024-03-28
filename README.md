@@ -132,3 +132,12 @@ We used `Badge` component from Chakra UI to show metacritic score. The score als
 To show image in game cards, we can crop them so that it saves the users' bandwidth and improves loading speed of the website. This is easy task since the `RAWG` api allows us to directly modify the url to crop the images.
 
 For eg: If the image url is :`https://media.rawg.io/media/games/20a/20aa03a10cda45239fe22d035c0ebe64.jpg`, we can modify url through function to make it: `https://media.rawg.io/media/crop/600/400/games/20a/20aa03a10cda45239fe22d035c0ebe64.jpg` which crops the original image to size of 600 \* 400.
+
+## Enhancing UX with Loading Skeletons
+
+We use `Skeleton` component to show loading page to the user when the game data is being fetched so that they know that the data is being loaded in the website. This is highly useful for low bandwidth users and large data loading.  
+It enhances the user experience (UX). This technique is used by almost all the social medias nowadays to gain the user's engagement and attention.
+
+## Removing Duplicate Styles
+
+To remove the duplicate styling of `skeleton cards` and `game cards`, we will create a new component with the similar style which wraps both the skeleton and game cards. This will remove duplicate styles and make our code less redundant.
