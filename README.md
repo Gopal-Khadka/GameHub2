@@ -146,3 +146,8 @@ To remove the duplicate styling of `skeleton cards` and `game cards`, we will cr
 
 Similar to fetching the games list, in this module we fetch the genres list and display it in sidebar as `Text` component. New hook and component file for fetching and showing genres is defined.  
 Refer to [this docs](https://api.rawg.io/docs/#operation/genres_list) for more info about genres.
+
+## Creating a Generic Data Fetch Hook
+
+Since the fetching of games and genres are almost similar, it is better to create a data fetch hook which fetch from both endpoints. This way, we can minimize the code redundancy and improve code reusability.  
+`useData.ts` is created to solve this issue.
