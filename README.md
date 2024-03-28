@@ -151,3 +151,9 @@ Refer to [this docs](https://api.rawg.io/docs/#operation/genres_list) for more i
 
 Since the fetching of games and genres are almost similar, it is better to create a data fetch hook which fetch from both endpoints. This way, we can minimize the code redundancy and improve code reusability.  
 `useData.ts` is created to solve this issue.
+
+## Displaying Genre List
+
+Since our genres are fetched, we need to show them in side-bar in the website. We use `List` and `ListItem` components to show them. Refer to [this site](https://chakra-ui.com/docs/components/list) for docs.
+
+We use templateColums property on game cards and grid items to modify the spacing and sizing of the game cards and side-bar. Chakra UI makes working with grids so much easier and convenient.
