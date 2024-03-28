@@ -141,3 +141,8 @@ It enhances the user experience (UX). This technique is used by almost all the s
 ## Removing Duplicate Styles
 
 To remove the duplicate styling of `skeleton cards` and `game cards`, we will create a new component with the similar style which wraps both the skeleton and game cards. This will remove duplicate styles and make our code less redundant.
+
+## Fetching Genres
+
+Similar to fetching the games list, in this module we fetch the genres list and display it in sidebar as `Text` component. New hook and component file for fetching and showing genres is defined.  
+Refer to [this docs](https://api.rawg.io/docs/#operation/genres_list) for more info about genres.
