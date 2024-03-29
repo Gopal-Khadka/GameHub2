@@ -206,3 +206,7 @@ We use `form` and `input` element to implement search functionality. We then sen
 ## Dynamic Heading For Games
 
 Since there are filters like `genre` and `platforms`, we can compute the heading based on the filters to render it visually.
+
+## Rating Stars
+
+To represent the rating of the games, we will be using the star icons from `react-icons` library.
