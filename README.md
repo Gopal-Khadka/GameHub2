@@ -157,3 +157,7 @@ Since the fetching of games and genres are almost similar, it is better to creat
 Since our genres are fetched, we need to show them in side-bar in the website. We use `List` and `ListItem` components to show them. Refer to [this site](https://chakra-ui.com/docs/components/list) for docs.
 
 We use templateColums property on game cards and grid items to modify the spacing and sizing of the game cards and side-bar. Chakra UI makes working with grids so much easier and convenient.
+
+## Showing a Skeleton For Genres
+
+We can simply shows the skeletons while the genres list are being fetched to the website similar to the gamecards.
