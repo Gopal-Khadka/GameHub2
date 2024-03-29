@@ -210,3 +210,7 @@ Since there are filters like `genre` and `platforms`, we can compute the heading
 ## Rating Stars
 
 To represent the rating of the games, we will be using the star icons from `react-icons` library.
+
+## Shipping Static Data
+
+Since our genres' data ever changes, it is not necessary for us to fetch them each time. We can just store it in a static file called `genres.ts` where the data is exported as default.

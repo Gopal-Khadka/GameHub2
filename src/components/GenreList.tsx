@@ -18,8 +18,8 @@ interface Props {
 const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const GenreList = ({ onLinkClick, selectedGenre }: Props) => {
-  const { datas: genres, isLoading } = useGenres();
-
+  const { datas: genres, isLoading, error } = useGenres();
+  if (error) return null;
   return (
     <>
       <Heading fontSize="x-large" marginBottom={2}>
