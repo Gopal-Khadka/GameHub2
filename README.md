@@ -190,3 +190,7 @@ Creating a state hook for every paramaeters like `genre`, `platform` clutters ou
 ## Building Sort Selector
 
 We will create a dropdown list of ordering of the games. Based on the selected order, we will render the games to the user.
+
+## Sorting Games
+
+Using sort selector, we can now sort games on basis of specific ordering like `name` , `rating` and more. However, some games are missing images which will be handled in the next section.
