@@ -1,4 +1,4 @@
-import useData from "./useData";
+import genres from "../data/genres";
 
 export interface Genre {
   id: number;
@@ -14,8 +14,6 @@ interface Game {
   name: string;
   added: number;
 }
-
-const endpoint = "/genres";
-const useGenres = () => useData<Genre>(endpoint);
+const useGenres = () => ({ datas: genres, isLoading: false, error: null });
 
 export default useGenres;

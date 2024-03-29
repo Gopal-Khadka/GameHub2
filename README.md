@@ -186,3 +186,35 @@ Then we simply need to use `selectedPlatform()` state to keep track of the selec
 ## Extracting Query Object
 
 Creating a state hook for every paramaeters like `genre`, `platform` clutters our code. Since the queries are related to each other, we can create a `GameQuery` Object. Later, if we need to add more parameters, doing that will be easy and can be modified from single place.
+
+## Building Sort Selector
+
+We will create a dropdown list of ordering of the games. Based on the selected order, we will render the games to the user.
+
+## Sorting Games
+
+Using sort selector, we can now sort games on basis of specific ordering like `name` , `rating` and more. However, some games are missing images which will be handled in the next section.
+
+## Handling Games Without Image
+
+We just return a placeholder image whenever the url is not found. We can use any image we want.
+
+## Searching Games
+
+We use `form` and `input` element to implement search functionality. We then send the entered input as `searchValue` to RAWG API and display the fetched games.
+
+## Dynamic Heading For Games
+
+Since there are filters like `genre` and `platforms`, we can compute the heading based on the filters to render it visually.
+
+## Rating Stars
+
+To represent the rating of the games, we will be using the star icons from `react-icons` library.
+
+## Shipping Static Data
+
+Since our genres' data ever changes, it is not necessary for us to fetch them each time. We can just store it in a static file called `genres.ts` where the data is exported as default.
+
+## Customizing Chakra Theme
+
+Since we are taking inspiration from RAWG API, it is a good idea to make our website look like RAWG website by configuring our Chakra Theme. Refer to [this](https://chakra-ui.com/docs/styled-system/customize-theme) for more
