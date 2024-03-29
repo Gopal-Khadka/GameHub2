@@ -7,6 +7,7 @@ import { useState } from "react";
 import PlatformDropDown from "./components/PlatformDropDown";
 import SortDropDown from "./components/SortDropDown";
 import { Platform } from "./hooks/usePlatforms";
+import GamesHeading from "./components/GamesHeading";
 import "./App.css";
 
 export interface GameQuery {
@@ -47,6 +48,7 @@ const App = () => {
           </GridItem>
         </Show>
         <GridItem area="main" padding={10}>
+          <GamesHeading gameQuery={gameQuery} />
           <HStack marginBottom={5} spacing={3}>
             <PlatformDropDown
               onPlatformClick={(platform) =>

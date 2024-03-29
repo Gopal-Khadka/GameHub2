@@ -202,3 +202,7 @@ We just return a placeholder image whenever the url is not found. We can use any
 ## Searching Games
 
 We use `form` and `input` element to implement search functionality. We then send the entered input as `searchValue` to RAWG API and display the fetched games.
+
+## Dynamic Heading For Games
+
+Since there are filters like `genre` and `platforms`, we can compute the heading based on the filters to render it visually.
