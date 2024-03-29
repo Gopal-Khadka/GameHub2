@@ -161,3 +161,9 @@ We use templateColums property on game cards and grid items to modify the spacin
 ## Showing a Skeleton For Genres
 
 We can simply shows the skeletons while the genres list are being fetched to the website similar to the gamecards.
+
+## Showing Games based on Genres
+
+We need to make use of the side-bar to show games based on the genres selected. The RAWG api allows us to specify the genre while requesting for the games. Genre's slug can be used to specify the genre when fetching games.
+
+Then we simply need to use `selectedGenre()` state to keep track of the selected Genre. The game cards will be re-rendered with new games.

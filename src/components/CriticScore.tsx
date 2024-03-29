@@ -6,7 +6,7 @@ const CriticScore = ({ metacritic }: Props) => {
   let color = metacritic > 75 ? "green" : metacritic > 60 ? "yellow" : "";
   return (
     <Badge
-      title={metacritic.toString()}
+      title={`${metacritic}`}
       cursor="pointer"
       borderRadius={2}
       paddingX={2}
