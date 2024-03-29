@@ -194,3 +194,7 @@ We will create a dropdown list of ordering of the games. Based on the selected o
 ## Sorting Games
 
 Using sort selector, we can now sort games on basis of specific ordering like `name` , `rating` and more. However, some games are missing images which will be handled in the next section.
+
+## Handling Games Without Image
+
+We just return a placeholder image whenever the url is not found. We can use any image we want.
