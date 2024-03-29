@@ -198,3 +198,7 @@ Using sort selector, we can now sort games on basis of specific ordering like `n
 ## Handling Games Without Image
 
 We just return a placeholder image whenever the url is not found. We can use any image we want.
+
+## Searching Games
+
+We use `form` and `input` element to implement search functionality. We then send the entered input as `searchValue` to RAWG API and display the fetched games.
