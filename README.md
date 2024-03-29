@@ -182,3 +182,7 @@ We will create a dropdown list of platform of the games. Based on the selected p
 We need to make use of the dropdown list to show games based on the platforms selected. The RAWG api allows us to specify the platform while requesting for the games. Platform's id can be used to specify the platform when fetching games.
 
 Then we simply need to use `selectedPlatform()` state to keep track of the selected platform. The game cards will be re-rendered with new games.
+
+## Extracting Query Object
+
+Creating a state hook for every paramaeters like `genre`, `platform` clutters our code. Since the queries are related to each other, we can create a `GameQuery` Object. Later, if we need to add more parameters, doing that will be easy and can be modified from single place.
