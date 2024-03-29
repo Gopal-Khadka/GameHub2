@@ -167,3 +167,8 @@ We can simply shows the skeletons while the genres list are being fetched to the
 We need to make use of the side-bar to show games based on the genres selected. The RAWG api allows us to specify the genre while requesting for the games. Genre's slug can be used to specify the genre when fetching games.
 
 Then we simply need to use `selectedGenre()` state to keep track of the selected Genre. The game cards will be re-rendered with new games.
+
+## Highlighting the Selected Genre
+
+This enhances the user experience when the user can know which genre is selected. We will bold the selected genre.  
+This can be done by checking if the `genre` and `selectedGenre` has same id or not.
