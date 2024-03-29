@@ -186,3 +186,7 @@ Then we simply need to use `selectedPlatform()` state to keep track of the selec
 ## Extracting Query Object
 
 Creating a state hook for every paramaeters like `genre`, `platform` clutters our code. Since the queries are related to each other, we can create a `GameQuery` Object. Later, if we need to add more parameters, doing that will be easy and can be modified from single place.
+
+## Building Sort Selector
+
+We will create a dropdown list of ordering of the games. Based on the selected order, we will render the games to the user.
