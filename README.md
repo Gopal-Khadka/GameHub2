@@ -172,3 +172,7 @@ Then we simply need to use `selectedGenre()` state to keep track of the selected
 
 This enhances the user experience when the user can know which genre is selected. We will bold the selected genre.  
 This can be done by checking if the `genre` and `selectedGenre` has same id or not.
+
+## Building Platform Selector
+
+We will create a dropdown list of platform of the games. Based on the selected platform, we will render the games to the user.
