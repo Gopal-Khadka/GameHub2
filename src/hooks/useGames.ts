@@ -1,5 +1,6 @@
 import useData from "./useData";
 import { Genre } from "./useGenres";
+import { Platform } from "./usePlatforms";
 
 export interface Game {
   id: number;
@@ -11,17 +12,23 @@ export interface Game {
   parent_platforms: { platform: Platform }[];
   metacritic: number;
 }
-export interface Platform {
-  id: number;
-  name: string;
-  slug: string;
+interface Props {
+  selectedGenre: Genre | null;
+  selectedPlatform: Platform | null;
 }
 
 let endpoint = "/games";
-const useGames = (selectedGenre: Genre | null) => {
-  return useData<Game>(endpoint, { params: { genres: selectedGenre?.slug } }, [
-    selectedGenre?.id,
-  ]);
+const useGames = ({ selectedGenre, selectedPlatform }: Props) => {
+  return useData<Game>(
+    endpoint,
+    {
+      params: {
+        genres: selectedGenre?.slug,
+        parent_platforms: selectedPlatform?.id,
+      },
+    },
+    [selectedGenre?.id, selectedPlatform?.id]
+  );
 };
 
 export default useGames;

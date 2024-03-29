@@ -176,3 +176,9 @@ This can be done by checking if the `genre` and `selectedGenre` has same id or n
 ## Building Platform Selector
 
 We will create a dropdown list of platform of the games. Based on the selected platform, we will render the games to the user.
+
+## Showing Games based on Platforms
+
+We need to make use of the dropdown list to show games based on the platforms selected. The RAWG api allows us to specify the platform while requesting for the games. Platform's id can be used to specify the platform when fetching games.
+
+Then we simply need to use `selectedPlatform()` state to keep track of the selected platform. The game cards will be re-rendered with new games.

@@ -7,11 +7,13 @@ import {
   FaApple,
   FaAndroid,
 } from "react-icons/fa";
-import { SiNintendo } from "react-icons/si";
-import { MdPhoneIphone } from "react-icons/md";
+import { SiNintendo, SiSega } from "react-icons/si";
+import { MdPhoneIphone, MdInbox } from "react-icons/md";
 import { BsGlobe } from "react-icons/bs";
-import { Platform } from "../hooks/useGames";
+import { SiAtari } from "react-icons/si";
 import { IconType } from "react-icons";
+import { GiGameConsole } from "react-icons/gi";
+import { Platform } from "../hooks/usePlatforms";
 
 interface Props {
   platforms: Platform[];
@@ -27,6 +29,10 @@ const iconMapper: { [key: string]: IconType } = {
   nintendo: SiNintendo,
   ios: MdPhoneIphone,
   web: BsGlobe,
+  atari: SiAtari,
+  sega: SiSega,
+  "neo-geo": MdInbox,
+  "3do": GiGameConsole,
 };
 
 const PlatformIcon = ({ platforms }: Props) => {
