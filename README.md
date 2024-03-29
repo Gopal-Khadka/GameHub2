@@ -214,3 +214,7 @@ To represent the rating of the games, we will be using the star icons from `reac
 ## Shipping Static Data
 
 Since our genres' data ever changes, it is not necessary for us to fetch them each time. We can just store it in a static file called `genres.ts` where the data is exported as default.
+
+## Customizing Chakra Theme
+
+Since we are taking inspiration from RAWG API, it is a good idea to make our website look like RAWG website by configuring our Chakra Theme. Refer to [this](https://chakra-ui.com/docs/styled-system/customize-theme) for more
